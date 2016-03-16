@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-starter',
+    modulePrefix: 'ember-template',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -16,12 +16,6 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    contentSecurityPolicy: {
-      'connect-src': '',
-      'script-src': '',
-      'style-src': "'self' 'unsafe-inline'"
     }
   };
 
@@ -31,13 +25,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-
-    ENV.apiHost = 'http://localhost:3000';
-    ENV.contentSecurityPolicy['connect-src'] += ' ' + ENV.apiHost;
-
-    ENV.contentSecurityPolicy['script-src'] += "'self' 'unsafe-inline' 'unsafe-eval'";
   }
-
 
   if (environment === 'test') {
     // Testem prefers this...
