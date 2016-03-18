@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
-  classNames: ['listr-list__listr-item'],
+  classNames: ['listr-list__listr-item', 'list-group-item'],
   done: Ember.computed.alias('item.done'),
   classNameBindings: ['done:listr-list__listr-item--done'],
   store: Ember.inject.service(),

@@ -1,2 +1,23 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 40px auto;
+  max-width: 650px;
+}
+
+.listr-list--hidden :not(:first-child) {
+  display: none;
+}
+
+.listr-list__listr-item {
+  list-style-position: inside;
+}
+
+.listr-list__listr-item--done {
+  text-decoration: line-through;
+}

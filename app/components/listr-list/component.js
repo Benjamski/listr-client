@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'ul',
-  classNames: ['listr-list'],
+  classNames: ['listr-list', 'list-group'],
   hidden: Ember.computed.alias('list.hidden'),
   classNameBindings: ['hidden:listr-list--hidden'],
   store: Ember.inject.service(),
