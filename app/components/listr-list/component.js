@@ -8,13 +8,13 @@ export default Ember.Component.extend({
   store: Ember.inject.service(),
   actions: {
     toggleList: function () {
-      var id = this.get('list.id');
-      var store = this.get('store');
+      let id = this.get('list.id');
+      let store = this.get('store');
 
       store.findRecord('list', id).then(function (list) {
         list.toggleProperty('hidden');
         list.save();
       });
-    }
-  }
+    },
+  },
 });

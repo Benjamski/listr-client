@@ -7,12 +7,12 @@ export default Ember.Component.extend({
   classNameBindings: ['done:listr-list__listr-item--done'],
   store: Ember.inject.service(),
   click: function () {
-    var id = this.get('item.id');
-    var store = this.get('store');
+    let id = this.get('item.id');
+    let store = this.get('store');
 
     store.findRecord('item', id).then(function (item) {
       item.toggleProperty('done');
       item.save();
     });
-  }
+  },
 });
